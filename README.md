@@ -4,22 +4,22 @@
 
 2. Initialize repo:
 
-```
-repo init -u https://android.googlesource.com/kernel/manifest -b common-android14-6.1-lts
-curl -o .repo/local_manifests/manifest_brcm_rpi.xml -L https://raw.githubusercontent.com/clear-code/android_kernel_brcm_rpi_manifest/android-14.0-docker/manifest_brcm_rpi.xml --create-dirs
+```console
+$ repo init -u https://android.googlesource.com/kernel/manifest -b common-android14-6.1-lts
+$ curl -o .repo/local_manifests/manifest_brcm_rpi.xml -L https://raw.githubusercontent.com/clear-code/android_kernel_brcm_rpi_manifest/android-14.0-docker/manifest_brcm_rpi.xml --create-dirs
 ```
 
 3. Sync source code:
 
-```
-repo sync
+```console
+$ repo sync
 ```
 
 4. Compile:
 
 Raspberry Pi 5:
-```
-tools/bazel build --config=fast --config=stamp //common:rpi5docker
+```console
+$ tools/bazel build --config=fast --config=stamp //common:rpi5docker
 ```
 
 Compiled kernel Image, dtbs, and overlays can be found in `bazel-bin/common/rpi5/arch/arm64/boot` directory.
