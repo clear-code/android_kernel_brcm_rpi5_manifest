@@ -6,7 +6,7 @@
 
 ```
 repo init -u https://android.googlesource.com/kernel/manifest -b common-android14-6.1-lts
-curl -o .repo/local_manifests/manifest_brcm_rpi.xml -L https://raw.githubusercontent.com/clear-code/android_kernel_manifest/android-14.0-docker/manifest_brcm_rpi.xml --create-dirs
+curl -o .repo/local_manifests/manifest_brcm_rpi.xml -L https://raw.githubusercontent.com/clear-code/android_kernel_brcm_rpi5_manifest/android-14.0-docker/manifest_brcm_rpi.xml --create-dirs
 ```
 
 3. Sync source code:
